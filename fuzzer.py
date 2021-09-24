@@ -56,7 +56,7 @@ def prints_results(print_results_method,print_results_url,print_results_wordlist
 
 def output_to_file_normal(WORD,FUZZER,content_length,response_code_show):
 
-    var_output_to_file_normal = (""+"{:<15}".format(WORD)+" | "+"{:<25}".format(FUZZER)+" [ Response Code: "+response_code_show+", Size: "+ content_length+ " ]"+"\n")
+    var_output_to_file_normal = (""+"{:<25}".format(WORD)+" | "+"{:<25}".format(FUZZER)+" [ Response Code: "+response_code_show+", Size: "+ content_length+ " ]"+"\n")
     str = appendStrings(var_output_to_file_normal)
     output_file.write(str)
 
@@ -85,15 +85,13 @@ def request(FUZZER,WORD,url_target,match_responseSize):
     else:
         payload = args.headers
         url_target = url_target.replace("FUZZER",FUZZER)
+        url_target = url_target.replace("FUZZER",FUZZER)
         payload=payload.replace("FUZZER",FUZZER)
-
-    
-    payload_show=payload
-    payload_show = payload_show.replace("\",","\",\n")
-    payload_show = payload_show.replace("{","")
-    payload_show = payload_show.replace("}","")
-    payload_show = payload_show.replace("\"","")
-
+        payload_show=payload
+        payload_show = payload_show.replace("\",","\",\n")
+        payload_show = payload_show.replace("{","")
+        payload_show = payload_show.replace("}","")
+        payload_show = payload_show.replace("\"","")
 
     if (args.method=="POST"):
         body={}
@@ -129,7 +127,7 @@ def request(FUZZER,WORD,url_target,match_responseSize):
 
     if response_code_show in response_code_matcher and content_length==match_responseSize:
 
-        print("","{:<15}".format(WORD)," | ","{:<25}".format(FUZZER), " [ Response Code: ",response_code_show,", Size: ", content_length, " ]")
+        print("","{:<25}".format(WORD)," | ","{:<25}".format(FUZZER), " [ Response Code: ",response_code_show,", Size: ", content_length, " ]")
 
     if output_to_file==True:
 

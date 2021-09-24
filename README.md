@@ -62,6 +62,33 @@ optional arguments:
   -v VERBOSE, --verbose VERBOSE                                 Verbose output. Printing full request and response. Default: False. Usage: -v 1 to
                                                                 activate
 ```
+## Output Example
+```
+________________________________________________                               
+                                                                                
+  :: Method             :  POST 
+  :: URL                :  http://www.google.com/FUZZER 
+  :: Wordlist           :  /home/filipe/lists/dirsmall.txt 
+  :: Output             :  - 
+  :: Timeout            :  None 
+  :: Matcher            :  Response status:  ['200', '204', '301', '302', '307', '400', '401', '402', '405'] 
+  :: Matcher            :  Response status:  ALL 
+ ________________________________________________                               
+
+ yram/                      |  yram/                      [ Response Code:  400 , Size:  1555  ]
+ interactivebrokers/        |  interactivebrokers/        [ Response Code:  400 , Size:  1555  ]
+ business/                  |  business/                  [ Response Code:  400 , Size:  1555  ]
+ dat/                       |  dat/                       [ Response Code:  400 , Size:  1555  ]
+ cic/                       |  cic/                       [ Response Code:  400 , Size:  1555  ]
+ mcs/                       |  mcs/                       [ Response Code:  400 , Size:  1555  ]
+ Exadmin/                   |  Exadmin/                   [ Response Code:  400 , Size:  1555  ]
+ cd/                        |  cd/                        [ Response Code:  400 , Size:  1555  ]
+ uml/                       |  uml/                       [ Response Code:  400 , Size:  1555  ]
+ dulux/                     |  dulux/                     [ Response Code:  400 , Size:  1555  ]
+ S4lam/                     |  S4lam/                     [ Response Code:  400 , Size:  1555  ]
+ excel/                     |  excel/                     [ Response Code:  400 , Size:  1555  ]
+ Devine1/                   |  Devine1/                   [ Response Code:  400 , Size:  1555  ]
+```
 
 ## License
 
